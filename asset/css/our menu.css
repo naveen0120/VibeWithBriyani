@@ -1,0 +1,363 @@
+/*--------------- Total  ---------------- */
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*--------------- Body ---------------- */
+
+body
+{
+    background: rgb(121,63,9);
+background: linear-gradient(90deg, rgba(121,63,9,0.9923319669664741) 35%, rgba(187,31,31,1) 100%);
+}
+
+/*--------------- Heading h1 tag ---------------- */
+
+h1
+{
+    text-align: center;
+    margin: 0;
+    color: orange;
+    text-shadow: 4px 4px 4px black;
+    padding-bottom: 20px;
+    font-family: 'Macondo Swash Caps', cursive;
+}
+
+/*--------------- Heading h2 tag ---------------- */
+
+h2
+{
+    
+    margin-top: 30px;
+    font-family: 'Macondo Swash Caps', cursive;
+    color:gold;
+    position: relative;
+    font-size: 2 rem;
+}
+
+h2::before 
+{  
+    transform: scaleX(0);
+    transform-origin:top bottom ;
+}
+  
+h2:hover::before 
+{
+    transform: scaleX(1);
+    transform-origin: bottom top;
+}
+
+h2:hover
+{
+    color: black;
+}
+  
+h2::before 
+{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background:gold;
+    z-index: -1;
+    transition: transform .7s ease;
+}
+
+.juicecream                         /* beverages */
+{
+    text-align:center;
+    color: chartreuse;
+    font-size:xx-large;
+    font-family: 'Londrina Outline', cursive;
+}
+    
+/*--------------- Navigation tab ---------------- */
+
+.nav-item
+{
+    margin: 10px;
+    margin-top: 0px;
+}
+
+.nav-link
+{
+    font-size: larger;
+    font-weight: bolder;
+    color:gold;
+    margin-bottom: 15px;
+}
+
+.nav-link1
+{
+    margin-bottom: 0;
+}
+
+.nav-link:hover
+{
+    background-color:olive;
+    border-radius: 20%;
+    color:aliceblue;
+}
+
+#cart                /* Cart Function */
+{
+    position: relative;
+    bottom: 14px;
+    right: 5px;
+    background-color: rgb(226, 4, 4);
+    border-radius: 50%;
+}
+
+/*--------------- Card Column ---------------- */
+
+.col-lg-3
+{
+    padding-bottom: 10px;
+}
+
+/*--------------- Card ---------------- */
+
+.card
+{
+    margin-bottom: 30px;
+    box-shadow:4px 4px 8px gold;
+    font-family: 'Macondo Swash Caps', cursive;
+}
+
+.card img          /*Menu Image*/
+{
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+}
+
+.card img:hover  
+{
+    transform: scale(1.07);
+    box-shadow: 2px 2px 4px  rgb(9, 81, 225) ;
+}
+
+.card-title         /* Menu dish */
+{
+    font-weight: bold;   
+}
+
+.card-title img   /* veg and non veg icon */
+{
+    width:8%;
+    padding-right: 4px;
+    margin-bottom: 3px;
+    margin-right: 4px;
+}
+
+
+.rate              /* Amount */
+{
+    font-size: larger;
+    color:rgb(240, 50, 17);
+    margin-top: 20px;
+}
+
+.slide             /* Transition animation */
+{
+    opacity: 0;
+    animation: slideIn 0.5s;
+}
+
+@keyframes slideIn 
+  {
+    0%
+    {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.glow-on-hover      /* Button Animation */
+{
+    float: right;
+    width: 60px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    background-color:goldenrod ;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before 
+{
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+
+
+.glow-on-hover:active:after 
+{
+    background: transparent;
+}
+
+.glow-on-hover:hover:before 
+{
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/*---------------Combo Card ---------------- */
+
+.combo
+{
+    float: right;
+    margin-right: 80px;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 7px;
+}
+
+.combo:hover
+{
+    color: black;
+    text-decoration: none;
+}
+
+/*--------------- Footer  ---------------- */
+
+.ico1
+{
+    list-style-type: none;
+    padding-bottom: 5px;
+    padding: 10px;
+    font-size:x-large;
+}
+
+
+.test           /* Redirect to Other Link */
+{
+    color: rgb(230, 16, 16);
+    text-decoration: none;
+    font-family: 'Macondo Swash Caps', cursive;
+}
+
+.test:hover
+{
+    color:rgb(0, 68, 255);
+    text-decoration: none;
+}
+
+.fon1    /* Social Media link */
+{
+    font-size: x-large;
+    margin-left: 30px;
+    padding-left: 20px;
+}
+
+.fon1 i
+{
+    padding-right: 10px;
+}
+
+/* Social Media Icons */
+
+.fa-map-marker
+{
+    padding-right: 10px;
+    font-size:xx-large;
+    color:rgb(9, 55, 236);
+}
+
+.fa-envelope
+{
+    padding-right: 10px;
+    font-size:xx-large;
+    color:rgb(9, 55, 236);
+}
+
+.fa-phone
+{
+    padding-right: 10px;
+    font-size:xx-large;
+    color:rgb(9, 55, 236);    
+}
+
+.fa-cutlery
+{
+    padding-right: 10px;
+    font-size:x-large;
+    color:rgb(30, 182, 108); 
+}
+
+.fa-facebook-official
+{
+    color:#3b5998
+}
+
+.fa-twitter-square
+{
+    color:#2180a2
+}
+
+.fa-instagram
+{
+  color:  rgb(228, 64, 95);
+}
+
+.fa-linkedin
+{
+color:#02628e
+}
+
+@media (orientation: landscape) 
+{
+    body 
+    {
+      grid-auto-flow: column;
+    }
+}
+  
+  
+
+
+

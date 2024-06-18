@@ -1,0 +1,92 @@
+h1
+{
+    text-align: center;
+    margin: 0;
+    color: orange;
+    text-shadow: 4px 4px 4px black;
+    padding-bottom: 20px;
+    font-family: 'Macondo Swash Caps', cursive;
+}
+
+h2
+{
+    
+    margin-top: 30px;
+    font-family: 'Macondo Swash Caps', cursive;
+    color:gold;
+}
+
+#cart {
+  position: relative;
+  bottom: 14px;
+  right: 5px;
+  background-color: rgb(226, 4, 4);
+  border-radius: 50%;
+}
+
+
+.nav-item
+{
+    margin: 10px;
+    position: sticky;
+}
+
+.nav-link
+{
+    font-size: larger;
+    font-weight: bolder;
+    color:gold;
+    
+}
+
+.nav-link:hover
+{
+    background-color:olive;
+    border-radius: 20%;
+    color: wheat;
+}
+
+body
+{
+    background: rgb(121,63,9);
+background: linear-gradient(90deg, rgba(121,63,9,0.9923319669664741) 35%, rgba(187,31,31,1) 100%);
+}
+
+h2::before {  
+    transform: scaleX(0);
+    transform-origin:top bottom ;
+  }
+  
+  h2:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom top;
+    
+  }
+  h2:hover
+  {
+    color: black;
+  }
+  
+  h2::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background:gold;
+    z-index: -1;
+    transition: transform .7s ease;
+  }
+  
+  h2 {
+    position: relative;
+    font-size: 2 rem;
+  }
+
+  .candle
+  {
+    font-size: x-large;
+    color: palegoldenrod;
+  }
+
+
